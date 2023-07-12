@@ -1,0 +1,1 @@
+{"mappings":"ACAA","sources":["<anon>","src/index.js"],"sourcesContent":["\n\"use strict\";\n\n\n//# sourceMappingURL=index.6a563c58.js.map\n","'use strict';\n\nimport axios from 'axios';\n"],"names":[],"version":3,"file":"index.6a563c58.js.map"}
