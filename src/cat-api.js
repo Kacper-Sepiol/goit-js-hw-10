@@ -3,7 +3,9 @@
 export { fetchBreeds };
 
 function fetchBreeds() {
-  fetch('https://api.thecatapi.com/v1/breeds')
+  return fetch(
+    'https://api.thecatapi.com/v1/breeds?api_key=live_VmDtYrbpf1ukWdNjYyiTKw9CRmmlBLZ8W01P36GtuxdccK2dNzVBnrdDdch5MJgS'
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(response.status);
