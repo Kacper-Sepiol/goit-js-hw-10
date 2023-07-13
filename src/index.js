@@ -1,5 +1,6 @@
 'use strict';
 
+import Notiflix from 'notiflix';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 const select = document.querySelector('.breed-select');
@@ -21,6 +22,9 @@ function hideLoader() {
 
 function showError() {
   error.style.display = 'block';
+  Notiflix.Notify.failure(
+    'Oops! Something went wrong! Try reloading the page!'
+  );
 }
 
 function hideError() {
