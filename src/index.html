@@ -5,30 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 10</title>
     <style>
-      .loader {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        position: relative;
-        animation: rotate 1s linear infinite;
-      }
-      .loader::before,
-      .loader::after {
-        content: '';
-        box-sizing: border-box;
-        position: absolute;
-        inset: 0px;
-        border-radius: 50%;
-        border: 5px solid purple;
-        animation: prixClipFix 2s linear infinite;
-      }
-      .loader::after {
-        inset: 8px;
-        transform: rotate3d(90, 90, 0, 180deg);
-        border-color: #ff3d00;
+      body {
+        background-color: rgb(224, 224, 224);
       }
 
-      @keyframes rotate {
+      .load {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #fff;
+        border-bottom-color: #ff3d00;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
         0% {
           transform: rotate(0deg);
         }
@@ -36,31 +28,14 @@
           transform: rotate(360deg);
         }
       }
-
-      @keyframes prixClipFix {
-        0% {
-          clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-        }
-        50% {
-          clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
-        }
-        75%,
-        100% {
-          clip-path: polygon(
-            50% 50%,
-            0 0,
-            100% 0,
-            100% 100%,
-            100% 100%,
-            100% 100%
-          );
-        }
-      }
     </style>
   </head>
   <body>
     <select class="breed-select"></select>
-    <p class="loader"></p>
+    <div style="display: flex; flex-direction: row; margin-top: 30px">
+      <span class="load" style="margin-right: 20px"></span>
+      <p class="loader">Loading data, please wait...</p>
+    </div>
     <p class="error"></p>
     <div class="cat-info" style="display: none">
       <img id="cat-image" src="#" alt="Cat image" />

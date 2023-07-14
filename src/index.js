@@ -11,13 +11,16 @@ const catDescription = document.querySelector('#cat-description');
 const catTemperament = document.querySelector('#cat-temperament');
 const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
+const loading = document.querySelector('.load');
 
 function showLoader() {
   loader.style.display = 'block';
+  loading.style.display = 'block';
 }
 
 function hideLoader() {
   loader.style.display = 'none';
+  loading.style.display = 'none';
 }
 
 function showError() {
